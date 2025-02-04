@@ -7,20 +7,51 @@ body {
     font-family: "Inter", sans-serif;
     padding: 1em;
     text-align: left;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    width: 60%;
+    max-width: 900px;
+}
+
+#col-left {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#col-left img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1em;
+}
+
+#col-right {
+    width: 80%;
+    padding-left: 1em;
 }
 
 h1, h2, h3, h4 {
     font-family: "Figtree", sans-serif;
 }
 
-.combine {
+.linkholder {
     display: flex;
-    flex-direction: row;
-    margin-right: 1em;
+    flex-wrap: wrap;
 }
 
-i {
-    font-size: 1.1em;
+.linkholder a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    margin-right: 1em;
+    margin-bottom: 0.5em;
 }
 
 .linkholder a:hover {
@@ -30,29 +61,23 @@ i {
 .linkholder a i {
     font-size: 1.5em;
     margin-right: 0.25em;
-    transform: translateY(-0.12em);
     color: #fff;
 }
-.linkholder a {
-    text-decoration: none;
-    color: white;
-    display: flex;
-    flex-direction: row;
-    margin-right: 1.5em;
-}
-.linkholder {
-    display: flex;
-    flex-direction: row;
-}
 
-@media only screen and (min-width: 600px) {
-    body {
-      width: 50%;
-      margin-left: 25%;
-      padding: 0;
+@media only screen and (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        width: 90%;
     }
-  }
 
-.devicons {
-    width: 88%;
+    #col-left {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 1em;
+    }
+
+    #col-right {
+        width: 100%;
+        padding-left: 0;
+    }
 }
